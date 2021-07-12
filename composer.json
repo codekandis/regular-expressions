@@ -1,0 +1,51 @@
+{
+	"name": "codekandis/regular-expressions",
+	"description": "`codekandis/regular-expressions` is a library to provide regular expression interfaces and classes.",
+	"keywords": [
+		"php",
+		"library",
+		"regular",
+		"expressions",
+		"regex",
+		"interfaces",
+		"classes"
+	],
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Christian Ramelow",
+			"email": "info@codekandis.net",
+			"homepage": "https://codekandis.net",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "info@codekandis.net",
+		"issues": "https://github.com/codekandis/regular-expressions/issues",
+		"docs": "https://github.com/codekandis/regular-expressions/README.md",
+		"source": "https://github.com/codekandis/regular-expressions/tree/master"
+	},
+	"require": {
+		"php": "^7.4"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master",
+		"codekandis/phpunit": "^3"
+	},
+	"autoload": {
+		"psr-4": {
+			"CodeKandis\\RegularExpressions\\": [
+				"src/"
+			]
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"CodeKandis\\RegularExpressions\\Tests\\": [
+				"tests/"
+			]
+		}
+	}
+}
