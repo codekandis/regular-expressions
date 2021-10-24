@@ -2,6 +2,8 @@
 namespace CodeKandis\RegularExpressions;
 
 use function preg_match;
+use function preg_match_all;
+use function preg_replace;
 
 /**
  * Represents a class wrapping a regular expression with common methods.
@@ -89,5 +91,19 @@ class RegularExpression implements RegularExpressionInterface
 		}
 
 		return $matches;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public function replace( string $replacement, string $subject, bool $throwNoMatchException, int $limit = -1, ?int &$count = null ): string
+	{
+		$pregReplaceResult = @preg_replace( $this->regularExpression, $replacement, $subject, $limit, $currentCount );
+		if ( 0 === $currentCount && true === $throwNoMatchException )
+		{
+			throw new RegularExpressionNotMatchingException( static::ERROR_REGULAR_EXPRESSION_NOT_MATCHING );
+		}
+
+		return $pregReplaceResult;
 	}
 }
