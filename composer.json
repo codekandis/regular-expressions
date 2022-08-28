@@ -28,11 +28,13 @@
 		"source": "https://github.com/codekandis/regular-expressions/tree/master"
 	},
 	"require": {
-		"php": "^7.4"
+		"php": ">=8.3",
+		"codekandis/types": "^1.0.0"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
-		"codekandis/phpunit": "^3"
+		"codekandis/phpunit": "^5.0.0",
+		"rector/rector": "^1.2.2"
 	},
 	"autoload": {
 		"psr-4": {
@@ -43,9 +45,15 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
+			"CodeKandis\\RegularExpressions\\Build\\": [
+				"build/"
+			],
 			"CodeKandis\\RegularExpressions\\Tests\\": [
 				"tests/"
 			]
 		}
+	},
+	"scripts": {
+		"test": "/usr/bin/env php -dxdebug.mode=coverage ./vendor/phpunit/phpunit/phpunit --configuration ./build/phpunit.xml"
 	}
 }
