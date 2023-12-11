@@ -6,6 +6,11 @@ use const PREG_PATTERN_ORDER;
 use const PREG_SET_ORDER;
 use const PREG_UNMATCHED_AS_NULL;
 
+/**
+ * Represents a flagable enumeration of options to perform a global regular expression match.
+ * @package codekandis/regular-expressions
+ * @author Christian Ramelow <info@codekandis.net>
+ */
 abstract class RegularExpressionMatchAllFlags
 {
 	/**

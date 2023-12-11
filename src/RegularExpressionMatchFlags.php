@@ -4,6 +4,11 @@ namespace CodeKandis\RegularExpressions;
 use const PREG_OFFSET_CAPTURE;
 use const PREG_UNMATCHED_AS_NULL;
 
+/**
+ * Represents a flagable enumeration of options to perform a regular expression match.
+ * @package codekandis/regular-expressions
+ * @author Christian Ramelow <info@codekandis.net>
+ */
 abstract class RegularExpressionMatchFlags
 {
 	/**

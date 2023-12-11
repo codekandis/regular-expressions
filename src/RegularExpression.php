@@ -57,7 +57,7 @@ class RegularExpression implements RegularExpressionInterface
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function match( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array
@@ -77,7 +77,7 @@ class RegularExpression implements RegularExpressionInterface
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array
@@ -97,7 +97,7 @@ class RegularExpression implements RegularExpressionInterface
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function replace( string $replacement, string $subject, bool $throwNoMatchException, int $limit = -1, ?int &$count = null ): string
