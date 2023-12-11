@@ -12,7 +12,7 @@ use function preg_match;
 class RegularExpressionValidator implements RegularExpressionValidatorInterface
 {
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function validate( string $regularExpression ): bool

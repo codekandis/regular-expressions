@@ -11,7 +11,6 @@ interface InvalidRegularExpressionExceptionInterface
 	/**
 	 * Static constructor method.
 	 * @param string $invalidRegularExpression The regular expression which is invalid.
-	 * @return static
 	 */
 	public static function with_invalidRegularExpression( string $invalidRegularExpression ): static;
 }

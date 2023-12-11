@@ -15,7 +15,6 @@ class InvalidOffsetException extends LogicException implements InvalidOffsetExce
 {
 	/**
 	 * Represents the exception message if an offset is invalid.
-	 * @var string
 	 */
 	public const string EXCEPTION_MESSAGE_INVALID_OFFSET = 'The offset `%s` is invalid. `%s <= offset <= %s` expected.';
 

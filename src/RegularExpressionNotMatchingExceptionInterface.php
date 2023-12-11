@@ -11,7 +11,6 @@ interface RegularExpressionNotMatchingExceptionInterface
 	/**
 	 * Static constructor method.
 	 * @param string $regularExpression The regular expression which does not match.
-	 * @return static
 	 */
 	public static function with_regularExpression( string $regularExpression ): static;
 }
