@@ -13,7 +13,6 @@ class RegularExpressionNotMatchingException extends LogicException implements Re
 {
 	/**
 	 * Represents the exception message if a regular expression does not match.
-	 * @var string
 	 */
 	public const string EXCEPTION_MESSAGE_REGULAR_EXPRESSION_NOT_MATCHING = 'The regular expression `%s` does not match.';
 

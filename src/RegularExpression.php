@@ -19,7 +19,6 @@ class RegularExpression extends BaseObject implements RegularExpressionInterface
 {
 	/**
 	 * Stores the plain regular expression.
-	 * @var string
 	 */
 	private readonly string $regularExpression;
 
@@ -49,7 +48,7 @@ class RegularExpression extends BaseObject implements RegularExpressionInterface
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function match( string $subject, bool $throwNoMatchException = true, int $flags = RegularExpressionMatchFlag::None->value, int $offset = 0 ): ?array
@@ -75,7 +74,7 @@ class RegularExpression extends BaseObject implements RegularExpressionInterface
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function matchAll( string $subject, bool $throwNoMatchException = true, int $flags = RegularExpressionMatchAllFlag::None->value, int $offset = 0 ): ?array
@@ -101,7 +100,7 @@ class RegularExpression extends BaseObject implements RegularExpressionInterface
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
 	#[Override]
 	public function replace( string $subject, string $replacement, bool $throwNoMatchException = true, int $limit = -1, ?int &$replacedCount = null ): string

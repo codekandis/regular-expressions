@@ -13,7 +13,6 @@ class InvalidRegularExpressionException extends InvalidValueException implements
 {
 	/**
 	 * Represents the exception message if a regular expression is invalid.
-	 * @var string
 	 */
 	public const string EXCEPTION_MESSAGE_INVALID_REGULAR_EXPRESSION = 'The regular expression `%s` is invalid.';
 

@@ -13,7 +13,6 @@ class InvalidLimitException extends LogicException implements InvalidLimitExcept
 {
 	/**
 	 * Represents the exception message if a limit is invalid.
-	 * @var string
 	 */
 	public const string EXCEPTION_MESSAGE_INVALID_LIMIT = 'The limit `%s` is invalid. `-1 <= limit` expected.';
 
