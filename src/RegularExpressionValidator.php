@@ -15,6 +15,6 @@ class RegularExpressionValidator implements RegularExpressionValidatorInterface
 	 */
 	public function validate( string $regularExpression ): bool
 	{
-		return !( false === @preg_match( $regularExpression, '' ) );
+		return false !== @preg_match( $regularExpression, '' );
 	}
 }
