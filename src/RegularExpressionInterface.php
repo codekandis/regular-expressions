@@ -12,23 +12,23 @@ interface RegularExpressionInterface
 	 * Searches for the first match in a subject.
 	 * @param string $subject The subject to match the regular expression with.
 	 * @param bool $throwNoMatchException True if an exception must be thrown if the regular expression does not match, otherwise false.
-	 * @param int $flags The search options.
+	 * @param int $flags The options of the search.
 	 * @param int $offset The offset to start the search from.
 	 * @return ?array The list of matches if found, otherwise null.
 	 * @throws RegularExpressionNotMatchingException The regular expression does not match.
 	 */
-	public function match( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array;
+	public function match( string $subject, bool $throwNoMatchException, int $flags = RegularExpressionMatchFlag::None->value, int $offset = 0 ): ?array;
 
 	/**
 	 * Searches for all matches in a subject.
 	 * @param string $subject The subject to match the regular expression with.
 	 * @param bool $throwNoMatchException True if an exception must be thrown if the regular expression does not match, otherwise false.
-	 * @param int $flags The search options.
+	 * @param int $flags The options of the search.
 	 * @param int $offset The offset to start the search from.
 	 * @return ?array The list of matches if found, otherwise null.
 	 * @throws RegularExpressionNotMatchingException The regular expression does not match.
 	 */
-	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array;
+	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = RegularExpressionMatchAllFlag::None->value, int $offset = 0 ): ?array;
 
 	/**
 	 * Replaces the matches in a subject.
