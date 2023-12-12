@@ -60,7 +60,7 @@ class RegularExpression implements RegularExpressionInterface
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public function match( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array
+	public function match( string $subject, bool $throwNoMatchException, int $flags = RegularExpressionMatchFlag::None->value, int $offset = 0 ): ?array
 	{
 		$matches = [];
 		if ( 0 === @preg_match( $this->regularExpression, $subject, $matches, $flags, $offset ) )
@@ -80,7 +80,7 @@ class RegularExpression implements RegularExpressionInterface
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array
+	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = RegularExpressionMatchAllFlag::None->value, int $offset = 0 ): ?array
 	{
 		$matches = [];
 		if ( 0 === @preg_match_all( $this->regularExpression, $subject, $matches, $flags, $offset ) )
