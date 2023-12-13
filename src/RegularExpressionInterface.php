@@ -1,6 +1,8 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\RegularExpressions;
 
+use CodeKandis\Types\InvalidOffsetExceptionInterface;
+
 /**
  * Represents the interface of any class wrapping a regular expression with common methods.
  * @package codekandis/regular-expressions
@@ -15,9 +17,10 @@ interface RegularExpressionInterface
 	 * @param int $flags The options of the search.
 	 * @param int $offset The offset to start the search from.
 	 * @return ?array The list of matches if found, otherwise null.
-	 * @throws RegularExpressionNotMatchingException The regular expression does not match.
+	 * @throws InvalidOffsetExceptionInterface The offset is invalid.
+	 * @throws RegularExpressionNotMatchingExceptionInterface The regular expression does not match.
 	 */
-	public function match( string $subject, bool $throwNoMatchException, int $flags = RegularExpressionMatchFlag::None->value, int $offset = 0 ): ?array;
+	public function match( string $subject, bool $throwNoMatchException = true, int $flags = RegularExpressionMatchFlag::None->value, int $offset = 0 ): ?array;
 
 	/**
 	 * Searches for all matches in a subject.
@@ -26,9 +29,10 @@ interface RegularExpressionInterface
 	 * @param int $flags The options of the search.
 	 * @param int $offset The offset to start the search from.
 	 * @return ?array The list of matches if found, otherwise null.
-	 * @throws RegularExpressionNotMatchingException The regular expression does not match.
+	 * @throws InvalidOffsetExceptionInterface The offset is invalid.
+	 * @throws RegularExpressionNotMatchingExceptionInterface The regular expression does not match.
 	 */
-	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = RegularExpressionMatchAllFlag::None->value, int $offset = 0 ): ?array;
+	public function matchAll( string $subject, bool $throwNoMatchException = true, int $flags = RegularExpressionMatchAllFlag::None->value, int $offset = 0 ): ?array;
 
 	/**
 	 * Replaces the matches in a subject.
@@ -38,7 +42,8 @@ interface RegularExpressionInterface
 	 * @param int $limit The maximum possible replacements, otherwise -1.
 	 * @param ?int $count If specified, stores the amount of replacements done.
 	 * @return string The replaced string.
-	 * @throws RegularExpressionNotMatchingException The regular expression does not match.
+	 * @throws InvalidLimitExceptionInterface The limit is invalid.
+	 * @throws RegularExpressionNotMatchingExceptionInterface The regular expression does not match.
 	 */
-	public function replace( string $replacement, string $subject, bool $throwNoMatchException, int $limit = -1, ?int &$count = null ): string;
+	public function replace( string $replacement, string $subject, bool $throwNoMatchException = true, int $limit = -1, ?int &$count = null ): string;
 }
