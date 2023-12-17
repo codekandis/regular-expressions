@@ -40,10 +40,10 @@ interface RegularExpressionInterface
 	 * @param string $subject The subject to replace its matches.
 	 * @param bool $throwNoMatchException True if an exception must be thrown if the regular expression does not match, otherwise false.
 	 * @param int $limit The maximum possible replacements, otherwise -1.
-	 * @param ?int $count If specified, stores the amount of replacements done.
+	 * @param ?int $replacedCount If specified, stores the amount of replacements done.
 	 * @return string The replaced string.
 	 * @throws InvalidLimitExceptionInterface The limit is invalid.
 	 * @throws RegularExpressionNotMatchingExceptionInterface The regular expression does not match.
 	 */
-	public function replace( string $replacement, string $subject, bool $throwNoMatchException = true, int $limit = -1, ?int &$count = null ): string;
+	public function replace( string $replacement, string $subject, bool $throwNoMatchException = true, int $limit = -1, ?int &$replacedCount = null ): string;
 }

@@ -103,15 +103,15 @@ class RegularExpression implements RegularExpressionInterface
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public function replace( string $replacement, string $subject, bool $throwNoMatchException = true, int $limit = -1, ?int &$count = null ): string
+	public function replace( string $replacement, string $subject, bool $throwNoMatchException = true, int $limit = -1, ?int &$replacedCount = null ): string
 	{
 		if ( -1 > $limit )
 		{
 			throw InvalidLimitException::with_invalidLimit( $limit );
 		}
 
-		$pregReplaceResult = @preg_replace( $this->regularExpression, $replacement, $subject, $limit, $currentCount );
-		if ( 0 !== $limit && 0 === $currentCount && true === $throwNoMatchException )
+		$pregReplaceResult = @preg_replace( $this->regularExpression, $replacement, $subject, $limit, $replacedCount );
+		if ( 0 !== $limit && 0 === $replacedCount && true === $throwNoMatchException )
 		{
 			throw RegularExpressionNotMatchingException::with_nonMatchingRegularExpression( $this->regularExpression );
 		}
