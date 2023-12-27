@@ -103,7 +103,7 @@ class RegularExpression implements RegularExpressionInterface
 	 * {@inheritDoc}
 	 */
 	#[Override]
-	public function replace( string $replacement, string $subject, bool $throwNoMatchException = true, int $limit = -1, ?int &$replacedCount = null ): string
+	public function replace( string $subject, string $replacement, bool $throwNoMatchException = true, int $limit = -1, ?int &$replacedCount = null ): string
 	{
 		if ( -1 > $limit )
 		{
