@@ -1,7 +1,7 @@
 {
 	"name": "codekandis/regular-expressions",
 	"description": "`codekandis/regular-expressions` is a library to provide regular expression interfaces and classes.",
-	"version": "dev-development",
+	"version": "1.0.0",
 	"keywords": [
 		"php",
 		"library",
