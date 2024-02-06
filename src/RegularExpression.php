@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\RegularExpressions;
 
+use Override;
 use function preg_match;
 use function preg_match_all;
 use function preg_replace;
@@ -58,6 +59,7 @@ class RegularExpression implements RegularExpressionInterface
 	/**
 	 * {@inheritDoc}
 	 */
+	#[Override]
 	public function match( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array
 	{
 		$matches = [];
@@ -77,6 +79,7 @@ class RegularExpression implements RegularExpressionInterface
 	/**
 	 * {@inheritDoc}
 	 */
+	#[Override]
 	public function matchAll( string $subject, bool $throwNoMatchException, int $flags = 0, int $offset = 0 ): ?array
 	{
 		$matches = [];
@@ -96,6 +99,7 @@ class RegularExpression implements RegularExpressionInterface
 	/**
 	 * {@inheritDoc}
 	 */
+	#[Override]
 	public function replace( string $replacement, string $subject, bool $throwNoMatchException, int $limit = -1, ?int &$count = null ): string
 	{
 		$pregReplaceResult = @preg_replace( $this->regularExpression, $replacement, $subject, $limit, $currentCount );
