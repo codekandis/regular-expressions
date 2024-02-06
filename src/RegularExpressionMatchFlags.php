@@ -11,12 +11,12 @@ abstract class RegularExpressionMatchFlags
 	 * @see https://www.php.net/manual/en/function.preg-match.php
 	 * @var int
 	 */
-	public const OFFSET_CAPTURE    = PREG_OFFSET_CAPTURE;
+	public const int OFFSET_CAPTURE = PREG_OFFSET_CAPTURE;
 
 	/**
 	 * Every unmatched subpattern will be returned as null.
 	 * @see https://www.php.net/manual/en/function.preg-match.php
 	 * @var int
 	 */
-	public const UNMATCHED_AS_NULL = PREG_UNMATCHED_AS_NULL;
+	public const int UNMATCHED_AS_NULL = PREG_UNMATCHED_AS_NULL;
 }

@@ -16,13 +16,13 @@ class RegularExpression implements RegularExpressionInterface
 	 * Represents the error message if a regular expression is invalid.
 	 * @var string
 	 */
-	protected const ERROR_INVALID_REGULAR_EXPRESSION = 'The regular expression is invalid.';
+	protected const string ERROR_INVALID_REGULAR_EXPRESSION = 'The regular expression is invalid.';
 
 	/**
 	 * Represents the error message if a regular expression does not match.
 	 * @var string
 	 */
-	protected const ERROR_REGULAR_EXPRESSION_NOT_MATCHING = 'The regular expression does not match.';
+	protected const string ERROR_REGULAR_EXPRESSION_NOT_MATCHING = 'The regular expression does not match.';
 
 	/**
 	 * Stores the plain regular expression.
