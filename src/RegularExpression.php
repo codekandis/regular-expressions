@@ -28,7 +28,7 @@ class RegularExpression implements RegularExpressionInterface
 	 * Stores the plain regular expression.
 	 * @var string
 	 */
-	private string $regularExpression;
+	private readonly string $regularExpression;
 
 	/**
 	 * Constructor method.
