@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\RegularExpressions;
 
+use Override;
 use function preg_match;
 
 /**
@@ -11,10 +12,11 @@ use function preg_match;
 class RegularExpressionValidator implements RegularExpressionValidatorInterface
 {
 	/**
-	 * {@inheritDoc}
+	 * @inheritDoc
 	 */
+	#[Override]
 	public function validate( string $regularExpression ): bool
 	{
-		return !( false === @preg_match( $regularExpression, '' ) );
+		return false !== @preg_match( $regularExpression, '' );
 	}
 }
