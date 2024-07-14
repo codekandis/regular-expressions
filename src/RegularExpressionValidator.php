@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\RegularExpressions;
 
+use CodeKandis\Types\BaseObject;
 use Override;
 use function preg_match;
 
@@ -9,7 +10,7 @@ use function preg_match;
  * @package codekandis/regular-expressions
  * @author Christian Ramelow <info@codekandis.net>
  */
-class RegularExpressionValidator implements RegularExpressionValidatorInterface
+class RegularExpressionValidator extends BaseObject implements RegularExpressionValidatorInterface
 {
 	/**
 	 * {@inheritDoc}

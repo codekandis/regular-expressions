@@ -1,6 +1,7 @@
 <?php declare( strict_types = 1 );
 namespace CodeKandis\RegularExpressions;
 
+use CodeKandis\Types\BaseObject;
 use CodeKandis\Types\OffsetOutOfRangeException;
 use Override;
 use function abs;
@@ -14,7 +15,7 @@ use function strlen;
  * @package codekandis/regular-expressions
  * @author Christian Ramelow <info@codekandis.net>
  */
-class RegularExpression implements RegularExpressionInterface
+class RegularExpression extends BaseObject implements RegularExpressionInterface
 {
 	/**
 	 * Stores the plain regular expression.
