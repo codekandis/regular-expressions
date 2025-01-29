@@ -55,5 +55,10 @@
 	},
 	"scripts": {
 		"test": "/usr/bin/env php -dxdebug.mode=coverage ./vendor/phpunit/phpunit/phpunit --configuration ./build/phpunit.xml"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "1.0.0-dev"
+		}
 	}
 }
