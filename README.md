@@ -7,6 +7,10 @@
 
 `codekandis/regular-expressions` is a library to provide regular expression interfaces and classes.
 
+> [!CAUTION]
+> This repository is no longer maintained.
+> It has been superseded by [codekandis/toolkit][xtlink-github-codekandis-toolkit].
+
 ## Index
 
 * [Installation](#installation)
@@ -29,3 +33,5 @@ $ composer require codekandis/regular-expressions
 
 [srclink-license]: ./LICENSE
 [srclink-changelog]: ./CHANGELOG.md
+
+[xtlink-github-codekandis-toolkit]: https://github.com/codekandis/toolkit
